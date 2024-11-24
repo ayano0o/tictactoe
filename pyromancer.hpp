@@ -6,15 +6,15 @@
 #include "player.hpp"
 #include "winning_combos.hpp"
 
-class HumanPlayer : public Player
+class Pyromancer : public Player
 {
 private:
   Board *board;
-  char mark;
   WinningCombos combos;
+  char mark;
 
 public:
-  HumanPlayer(Board *board, char mark);
+  Pyromancer(Board *board, char mark);
   void get_move() override;
   char get_mark() override;
   WinningCombos get_winning_combos() override;

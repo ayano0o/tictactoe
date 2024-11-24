@@ -6,7 +6,7 @@
 #include "player.hpp"
 #include "winning_combos.hpp"
 
-class HumanPlayer : public Player
+class Swarm : public Player
 {
 private:
   Board *board;
@@ -14,7 +14,7 @@ private:
   WinningCombos combos;
 
 public:
-  HumanPlayer(Board *board, char mark);
+  Swarm(Board *board, char mark);
   void get_move() override;
   char get_mark() override;
   WinningCombos get_winning_combos() override;
