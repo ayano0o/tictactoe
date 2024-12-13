@@ -3,7 +3,7 @@
 
 #include "swarm.hpp"
 
-Swarm::Swarm(Board *board, char mark)
+Swarm::Swarm(Board* board, char mark) : board(board), mark(mark) 
 {
   this->board = board;
   this->mark = mark;

@@ -1,7 +1,7 @@
 #include "board.hpp"
 #include "console.hpp"
 
-Console::Console(Board *board)
+Console::Console(Board* board) : board(board) 
 {
   this->board = board;
 }

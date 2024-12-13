@@ -1,7 +1,7 @@
 #include "game_state.hpp"
 #include <unordered_map>
 
-GameState::GameState(Board *board)
+GameState::GameState(Board* board) : board(board) 
 {
   this->board = board;
 }

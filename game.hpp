@@ -15,6 +15,6 @@ private:
   Player *other_player;
 
 public:
-  inline Game(Console *console, GameState *game_state, Player *player_one, Player *player_two);
-  inline void start();
+   Game(Console *console, GameState *game_state, Player *player_one, Player *player_two);
+   void start();
 };

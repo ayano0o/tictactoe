@@ -1,13 +1,12 @@
 #include <iostream>
 
-#include "board.cpp"
-#include "console.cpp"
-#include "game_state.cpp"
-#include "human_player.cpp"
-#include "pyromancer.cpp"
-#include "game.cpp"
-#include "swarm.cpp"
-#include "game_STATS.cpp"
+#include "board.hpp"
+#include "console.hpp"
+#include "game_state.hpp"
+#include "human_player.hpp"
+#include "game.hpp"
+#include "swarm.hpp"
+#include "pyromancer.hpp"
 
 int main()
 {
