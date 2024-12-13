@@ -5,7 +5,7 @@
 class WinningCombos
 {
 private:
-  std::vector<std::vector<int>> winning_combos;
+  std::vector<std::vector<int> > winning_combos;
 
 public:
   WinningCombos()
@@ -77,26 +77,21 @@ public:
     combo_four.push_back(7);
     this->winning_combos.push_back(combo_four);
 
-    this->winning_combos[4][0] = 2;
-    this->winning_combos[4][1] = 5;
-    this->winning_combos[4][2] = 8;
+    std::vector<int> combo_five = {2, 5, 8};
+    this->winning_combos.push_back(combo_five);
 
-    this->winning_combos[5][0] = 3;
-    this->winning_combos[5][1] = 6;
-    this->winning_combos[5][2] = 9;
+    std::vector<int> combo_six = {3, 6, 9};
+    this->winning_combos.push_back(combo_six);
 
-    this->winning_combos[6][0] = 1;
-    this->winning_combos[6][1] = 5;
-    this->winning_combos[6][2] = 9;
+    std::vector<int> combo_seven = {1, 5, 9};
+    this->winning_combos.push_back(combo_seven);
 
-    this->winning_combos[7][0] = 3;
-    this->winning_combos[7][1] = 5;
-    this->winning_combos[7][2] = 7;
-
+    std::vector<int> combo_eight = {3, 5, 7};
+    this->winning_combos.push_back(combo_eight);
     this->winning_combos.push_back(additional_combo);
   }
 
-  std::vector<std::vector<int>> all()
+  std::vector<std::vector<int> > all()
   {
     return this->winning_combos;
   }

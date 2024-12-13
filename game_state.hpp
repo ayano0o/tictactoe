@@ -10,10 +10,10 @@ class GameState
 {
 private:
   Board *board;
-  bool winning_combo(std::vector<int> combo);
-  std::string select_winner(int cell);
+  inline bool winning_combo(std::vector<int> combo);
+  inline std::string select_winner(int cell);
 
 public:
-  GameState(Board *board);
-  std::string current_state(Player *current_player);
+  inline GameState(Board *board);
+  inline std::string current_state(Player *current_player);
 };

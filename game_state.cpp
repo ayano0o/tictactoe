@@ -47,8 +47,8 @@ std::string GameState::select_winner(int cell)
 
 std::string GameState::current_state(Player *current_player)
 {
-  std::vector<std::vector<int>> combos = current_player->get_winning_combos().all();
-  std::vector<std::vector<int>>::iterator combo_iterator;
+  std::vector<std::vector<int> > combos = current_player->get_winning_combos().all();
+  std::vector<std::vector<int> >::iterator combo_iterator;
 
   for (combo_iterator = combos.begin(); combo_iterator != combos.end(); combo_iterator++)
   {

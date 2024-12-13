@@ -15,22 +15,17 @@ Game::Game(Console *console, GameState *game_state, Player *player_one, Player *
 
 void Game::start()
 {
-  while (game_state->current_state(current_player) == "in-progress" && game_state->current_state(other_player) == "in-progress")
-  {
-    std::cout << console->display();
-    current_player->get_move();
-    if (current_player->get_mark() == 'X')
+    while (game_state->current_state(current_player) == "in-progress")
     {
-      current_player = player_two;
-      other_player = player_one;
-    }
-    else
-    {
-      current_player = player_one;
-      other_player = player_two;
-    }
-  }
+        std::cout << console->display();
+        current_player->get_move();
 
-  std::cout << game_state->current_state(current_player) << std::endl;
-  std::cout << game_state->current_state(other_player) << std::endl;
+        if (game_state->current_state(current_player) != "in-progress")
+        {
+            break;
+        }
+        std::swap(current_player, other_player);
+    }
+
+    std::cout << game_state->current_state(current_player) << std::endl;
 }

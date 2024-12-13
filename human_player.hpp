@@ -14,8 +14,8 @@ private:
   WinningCombos combos;
 
 public:
-  HumanPlayer(Board *board, char mark);
-  void get_move() override;
-  char get_mark() override;
-  WinningCombos get_winning_combos() override;
+  inline HumanPlayer(Board *board, char mark);
+  inline void get_move() override;
+  inline char get_mark() override;
+  inline WinningCombos get_winning_combos() override;
 };

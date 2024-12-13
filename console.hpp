@@ -13,6 +13,6 @@ private:
   std::string padding = " ";
 
 public:
-  Console(Board *board);
-  std::string display();
+  inline Console(Board *board);
+  inline std::string display();
 };

@@ -32,27 +32,19 @@ void Swarm::get_move()
         std::cout << "What is your move? ";
         std::cin >> move;
 
-        if (std::cin.fail())
+        if (move < 1 || move > 9)
         {
-            std::cin.clear(); 
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
-            std::cout << "Invalid input! Please enter a number.\n";
-            continue;
+            std::cout << "Invalid move! Please enter a number between 1 and 9.\n";
         }
-
-        if (move < 0 || move >= board->get_mark(move))
-        {
-            std::cout << "Invalid move! Please enter a number between 0 and " << board->get_mark(move) - 1 << ".\n";
-        }
-        else if (!board->cellOccupation(move))
+        else if (board->cellOccupation(move))
         {
             std::cout << "That cell is already occupied! Please choose another one.\n";
         }
         else
         {
+            board->move(move, this->mark);
             valid = true; 
         }
     }
-
-    this->board->move(move, this->mark);
 }
+

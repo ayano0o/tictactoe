@@ -1,12 +1,13 @@
 #include <iostream>
 
-#include "board.hpp"
-#include "console.hpp"
-#include "game_state.hpp"
-#include "human_player.hpp"
-#include "pyromancer.hpp"
-#include "game.hpp"
-#include "swarm.hpp"
+#include "board.cpp"
+#include "console.cpp"
+#include "game_state.cpp"
+#include "human_player.cpp"
+#include "pyromancer.cpp"
+#include "game.cpp"
+#include "swarm.cpp"
+#include "game_STATS.cpp"
 
 int main()
 {
@@ -18,4 +19,5 @@ int main()
   Game game(&console, &game_state, &player_one, &player_two);
 
   game.start();
+  return 0;
 }

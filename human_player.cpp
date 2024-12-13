@@ -9,6 +9,11 @@ HumanPlayer::HumanPlayer(Board *board, char mark)
   this->combos = WinningCombos();
 }
 
+WinningCombos HumanPlayer::get_winning_combos()
+{
+  return this->combos;
+}
+
 char HumanPlayer::get_mark()
 {
   return this->mark;
